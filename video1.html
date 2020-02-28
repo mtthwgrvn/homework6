@@ -18,12 +18,39 @@
 	}
 
 	/*Use CSS before property to display the image before the text in the buttons*/
-.play::before {
-	/* https://stackoverflow.com/questions/10829675/how-to-put-an-image-in-div-with-css */
-	/* https://stackoverflow.com/questions/12082948/resize-the-content-propertys-image */
-	content:  url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0751ciOwPHBdltgEarHFb4OLtsi5X2p7VGrOs-edZ4ME9j9Bc&s");
-	zoom: 40%;
-}
+	.play {
+		background-color:#3bb3e0;
+		font-family: 'Open Sans', sans-serif;
+		font-size:12px;
+		text-decoration:none;
+		
+		color:#fff;
+		position:relative;
+		padding:10px 20px;
+		border-left:solid 1px #2ab7ec;
+		margin-left:35px;
+		background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+	}
+
+	.play:active {
+		top:3px;
+		background-image: linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+		box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+	}
+	.play::before {
+		content: url("https://freeiconshop.com/wp-content/uploads/edd/play-flat.png");
+		zoom: 10%;
+	}
+
+	.play:active::before {
+		top:-3px;
+		box-shadow:inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #032b3a, 1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64, 2px 5px 0px 0px #044a64, 6px 4px 2px #0b698b, 0px 10px 5px #999 ;
+	}
+
+
 
 .pause::before {
 	content: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Ic_pause_circle_fill_48px.svg/768px-Ic_pause_circle_fill_48px.svg.png");
